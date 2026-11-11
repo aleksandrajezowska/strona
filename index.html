@@ -18,7 +18,8 @@
   color-scheme:light;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:clip}
+body{overflow-x:clip;overscroll-behavior-x:none}
 body{margin:0;background:var(--white);color:var(--ink);font-family:var(--sans);font-weight:400;font-size:17px;line-height:1.5;letter-spacing:-.005em;-webkit-font-smoothing:antialiased}
 h1,h2,h3,p{margin:0}
 a{color:inherit}
@@ -174,7 +175,9 @@ footer{background:var(--tile);border-top:1px solid var(--line)}
   .fact .v{font-size:52px}
   .cases{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin-inline:-22px;padding-inline:22px;scrollbar-width:none;grid-template-columns:none}
   .cases::-webkit-scrollbar{display:none}
-  .case{flex:0 0 86%;scroll-snap-align:center}
+  .cases{overflow-y:hidden;overscroll-behavior-x:contain;touch-action:pan-x pan-y;-webkit-overflow-scrolling:touch}
+  .case{flex:0 0 86%;scroll-snap-align:center;scroll-snap-stop:always}
+  .cases .case.rv{transform:none}
   .dots{display:flex;gap:8px;justify-content:center;margin-top:20px}
   .dots span{width:7px;height:7px;border-radius:4px;background:rgba(22,17,15,.2);transition:width .35s var(--ease),background .2s}
   .dots span.on{width:20px;background:var(--ink)}
