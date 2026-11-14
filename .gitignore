@@ -1,0 +1,4 @@
+# Klucze i hasła nigdy nie trafiają do repozytorium
+.env
+.env.*
+!.env.example
