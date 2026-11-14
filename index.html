@@ -246,7 +246,23 @@ html.cta-v .btn-main:hover{background:#5a3fd0}
 @media (prefers-reduced-transparency:reduce){
   header.nav,.sheet{background:#fff;-webkit-backdrop-filter:none;backdrop-filter:none}
 }
-</style></head><body>
+</style><script async src="https://www.googletagmanager.com/gtag/js?id=G-F3LFPM4PX7"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{analytics_storage:'denied',ad_storage:'denied'});gtag('js',new Date());gtag('config','G-F3LFPM4PX7',{anonymize_ip:true});</script>
+<style>
+.cookie{position:fixed;left:0;right:0;bottom:0;z-index:50;background:#fff;color:#16110F;border-top:3px solid #6A4FE0;box-shadow:0 -8px 24px rgba(22,17,15,.08);padding:16px max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-bottom,0px));font:15px/1.5 Jost,system-ui,sans-serif}
+.cookie[hidden]{display:none!important}
+.cookie p{margin:0 0 12px;max-width:760px}
+.cookie a{color:#6A4FE0;text-decoration:underline}
+.cookie .row{display:flex;gap:10px;flex-wrap:wrap}
+.cookie button{font:inherit;border-radius:999px;padding:10px 20px;cursor:pointer;border:1.5px solid #16110F;background:#fff;color:#16110F}
+.cookie button.main{background:#16110F;color:#fff}
+.privacy{padding:64px max(16px,env(safe-area-inset-left,0px)) 72px;max-width:760px;margin:0 auto;font:16px/1.6 Jost,system-ui,sans-serif;color:#16110F}
+.privacy h2{font-size:28px;font-weight:500;margin:0 0 16px}
+.privacy h3{font-size:18px;font-weight:600;margin:24px 0 8px}
+.privacy p,.privacy li{color:#4a4440}
+</style>
+<meta name="google-site-verification" content="gvYykSsai9UWluN3hM7aRPRL3Fjn592vNEKFMew1zxM" />
+</head><body>
 
 
 <header class="nav" id="nav">
@@ -395,4 +411,32 @@ html.cta-v .btn-main:hover{background:#5a3fd0}
   },{passive:true});
 })();
 </script>
+<div class="cookie" id="cookie" hidden role="region" aria-label="Zgoda na analitykę">
+  <p>Ta strona używa Google Analytics, żeby zobaczyć, ile osób ją odwiedza i co ich interesuje. Dane są zbierane tylko po Twojej zgodzie. Więcej w <a href="#prywatnosc">polityce prywatności</a>.</p>
+  <div class="row"><button class="main" id="cookie-yes">Zgadzam się</button><button id="cookie-no">Nie zgadzam się</button></div>
+</div>
+<script>
+(function(){
+  var box=document.getElementById('cookie');
+  function get(){try{return localStorage.getItem('cookie-ga');}catch(e){return null;}}
+  function set(v){try{localStorage.setItem('cookie-ga',v);}catch(e){}}
+  function grant(){gtag('consent','update',{analytics_storage:'granted'});}
+  if(get()==='granted'){grant();}
+  else if(get()===null){box.hidden=false;}
+  document.getElementById('cookie-yes').addEventListener('click',function(){set('granted');grant();box.hidden=true;});
+  document.getElementById('cookie-no').addEventListener('click',function(){set('denied');box.hidden=true;});
+})();
+</script>
+<section class="privacy" id="prywatnosc">
+  <h2>Polityka prywatności</h2>
+  <p>Administratorem danych jest Aleksandra Jeżowska, kontakt: kontakt@aleksandrajezowska.pl.</p>
+  <h3>Jakie dane zbieramy</h3>
+  <p>Google Analytics zbiera informacje o odwiedzinach: strony, czas, źródło wejścia (np. LinkedIn) i kliknięcia w przyciski. Adres IP jest anonimizowany. Zbieramy je tylko po wyrażeniu zgody.</p>
+  <h3>Cel i podstawa</h3>
+  <p>Cel: zrozumienie, jakie treści są przydatne. Podstawa: zgoda (art. 6 ust. 1 lit. a RODO), którą możesz wycofać w każdej chwili, czyszcząc dane strony w przeglądarce.</p>
+  <h3>Odbiorcy i przechowywanie</h3>
+  <p>Dane przetwarza Google Ireland Limited jako dostawca Google Analytics. Dane są przechowywane zgodnie z ustawieniami tej usługi.</p>
+  <h3>Twoje prawa</h3>
+  <p>Masz prawo dostępu do danych, ich sprostowania, usunięcia i sprzeciwu. Napisz na kontakt@aleksandrajezowska.pl.</p>
+</section>
 </body></html>
